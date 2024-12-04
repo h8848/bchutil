@@ -2,8 +2,8 @@ package bchutil
 
 import (
 	"errors"
+	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcutil"
 )
 
 func PayToAddrScript(addr btcutil.Address) ([]byte, error) {
@@ -21,5 +21,5 @@ func PayToAddrScript(addr btcutil.Address) ([]byte, error) {
 	if err == nil {
 		return script, nil
 	}
-	return script, errors.New("Unrecognized address format")
+	return script, errors.New("unrecognized address format")
 }
